@@ -4,10 +4,9 @@ import { arr, fadeIn } from '../../service/data'
 
 const OnboardingComponent = () => {
     const [value, setValue] = React.useState(0)
-    const [delay, setDelay] = React.useState(5000)
+    const [delay] = React.useState(5000)
 
     useInterval(() => {
-        console.log(value)
         value === 2 ? setValue(0) : setValue(value + 1);
         arr.map(i => {
             return (i.show = "none");
