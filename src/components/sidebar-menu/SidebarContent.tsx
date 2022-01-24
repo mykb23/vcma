@@ -52,7 +52,7 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
                     </NavItem>
                 </Flex>
                 <Flex mt={150}>
-                    <Link to={'cards'} style={{ textDecoration: 'none' }}>
+                    <Link to={'sign-up'} style={{ textDecoration: 'none' }}>
                         <Flex
                             align="center"
                             p="4"

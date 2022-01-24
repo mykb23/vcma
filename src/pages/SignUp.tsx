@@ -1,8 +1,11 @@
 import { Button, Checkbox, Flex, FormControl, FormLabel, Input, Stack, Box, Text, Select, Heading } from '@chakra-ui/react'
 import React from 'react'
 import OnboardingComponent from "../components/onboarding/OnboardingComponent";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+    let navigate = useNavigate();
+
     return (
         <>
             <Stack minH={'100vh'} direction={{ base: 'column', md: 'row' }}>
@@ -36,8 +39,8 @@ const SignUp = () => {
                             <Stack spacing={6}>
                                 <Checkbox pt={6} colorScheme='blue' defaultIsChecked>I accept these terms and conditions</Checkbox>
 
-                                <Button colorScheme={'blue'} variant={'solid'} size={'lg'}>
-                                    Sign in
+                                <Button colorScheme={'blue'} variant={'solid'} size={'lg'} onClick={() => navigate('/dashboard')}>
+                                    Get Started
                                 </Button>
                             </Stack>
                         </Stack>

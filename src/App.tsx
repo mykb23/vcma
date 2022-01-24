@@ -4,7 +4,7 @@ import {
   theme,
 } from "@chakra-ui/react"
 // import { ColorModeSwitcher } from "./ColorModeSwitcher"
-import { Route, Routes } from "react-router-dom"
+import { Navigate, Route, Routes } from "react-router-dom"
 import SignUp from "./pages/SignUp"
 import DashboardLayout from "./layouts/DashboardLayout"
 import Dashboard from "./pages/Dashboard"
@@ -14,6 +14,7 @@ import Details from "./pages/Details"
 export const App = () => (
   <ChakraProvider theme={theme}>
     <Routes>
+      <Route path="/" element={<Navigate to="sign-up" />} />
       <Route path='sign-up' element={<SignUp />} />
       <Route element={<DashboardLayout />}>
         <Route path='dashboard' element={<Dashboard />} />
